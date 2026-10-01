@@ -4,21 +4,21 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>iPhone 18 Pro Max: US vs UK</title>
-<meta name="description" content="Landed cost in GBP of an iPhone 18 Pro Max 512GB bought in California, Texas, Michigan, Oregon or the UK, including sales tax, card FX fees and UK import VAT.">
+<meta name="description" content="GBP cost of an iPhone 18 Pro Max 512GB in all 50 US states plus DC (sales tax, discount, card FX fee), compared with buying in the UK.">
 <style>
 :root{
   --bg:#f6f7f9;--card:#ffffff;--ink:#14171c;--muted:#5d6673;--line:#e3e6eb;
-  --accent:#0a66d8;--good:#147a3d;--bad:#b42318;--bar:#9db8de;--bar-best:#2f9e5b;--bar-uk:#7a7f87;
+  --accent:#0a66d8;--good:#147a3d;--bad:#b42318;--bar:#9db8de;--bar-best:#2f9e5b;--bar-uk:#7a7f87;--uk-row:rgba(10,102,216,.08);
 }
 @media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
   --bg:#0f1115;--card:#171a20;--ink:#e9ecf1;--muted:#9aa3af;--line:#2a2f38;
-  --accent:#5ea2ff;--good:#4cc27a;--bad:#ff7a6e;--bar:#3c5677;--bar-best:#3fae6a;--bar-uk:#6b717a;}}
+  --accent:#5ea2ff;--good:#4cc27a;--bad:#ff7a6e;--bar:#3c5677;--bar-best:#3fae6a;--bar-uk:#8a9099;--uk-row:rgba(94,162,255,.12);}}
 :root[data-theme="dark"]{
   --bg:#0f1115;--card:#171a20;--ink:#e9ecf1;--muted:#9aa3af;--line:#2a2f38;
-  --accent:#5ea2ff;--good:#4cc27a;--bad:#ff7a6e;--bar:#3c5677;--bar-best:#3fae6a;--bar-uk:#6b717a;}
+  --accent:#5ea2ff;--good:#4cc27a;--bad:#ff7a6e;--bar:#3c5677;--bar-best:#3fae6a;--bar-uk:#8a9099;--uk-row:rgba(94,162,255,.12);}
 *{box-sizing:border-box}
 body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif}
-main{max-width:980px;margin:0 auto;padding:28px 16px 60px}
+main{max-width:1000px;margin:0 auto;padding:28px 16px 60px}
 h1{font-size:1.7rem;margin:0 0 4px;letter-spacing:-.01em}
 h2{font-size:1.1rem;margin:0 0 12px}
 .sub{color:var(--muted);margin:0 0 22px}
@@ -27,35 +27,38 @@ h2{font-size:1.1rem;margin:0 0 12px}
 .verdict b{color:var(--good)}
 .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px}
 label{display:block;font-size:.85rem;color:var(--muted);margin-bottom:4px}
-input[type=number],select{width:100%;padding:8px 10px;border:1px solid var(--line);border-radius:8px;background:var(--bg);color:var(--ink);font:inherit}
-.check{display:flex;gap:8px;align-items:flex-start;font-size:.92rem;color:var(--ink)}
-.check input{margin-top:4px}
+input[type=number],input[type=search],select{width:100%;padding:8px 10px;border:1px solid var(--line);border-radius:8px;background:var(--bg);color:var(--ink);font:inherit}
 .hint{font-size:.8rem;color:var(--muted);margin-top:4px}
+.toolbar{display:flex;gap:12px;flex-wrap:wrap;align-items:end;margin-bottom:12px}
+.toolbar>div{flex:1 1 200px}
 .table-wrap{overflow-x:auto}
-table{width:100%;border-collapse:collapse;font-variant-numeric:tabular-nums;min-width:640px}
-th,td{padding:10px 8px;border-bottom:1px solid var(--line);text-align:right;white-space:nowrap}
-th:first-child,td:first-child{text-align:left}
-th{font-size:.8rem;color:var(--muted);font-weight:600}
-td select{width:auto;padding:4px 6px;font-size:.85rem}
-tr.best td{background:color-mix(in srgb,var(--good) 10%,transparent)}
+table{width:100%;border-collapse:collapse;font-variant-numeric:tabular-nums;min-width:660px}
+th,td{padding:8px;border-bottom:1px solid var(--line);text-align:right;white-space:nowrap}
+th:nth-child(2),td:nth-child(2){text-align:left}
+th{font-size:.8rem;color:var(--muted);font-weight:600;position:sticky;top:0;background:var(--card)}
+td select{width:auto;max-width:240px;padding:4px 6px;font-size:.85rem}
+td.rank{color:var(--muted);width:36px}
+tr.uk td{background:var(--uk-row);font-weight:600}
+tr.best td{background:color-mix(in srgb,var(--good) 12%,transparent)}
 .total{font-weight:700}
 .pos{color:var(--good)}.neg{color:var(--bad)}
-.bars{display:grid;gap:8px}
-.barrow{display:grid;grid-template-columns:110px 1fr 80px;gap:10px;align-items:center;font-size:.9rem}
-.track{background:var(--bg);border-radius:6px;height:22px;overflow:hidden}
-.fill{height:100%;border-radius:6px;background:var(--bar);transition:width .3s}
+.bars{display:grid;gap:4px}
+.barrow{display:grid;grid-template-columns:150px 1fr 84px;gap:10px;align-items:center;font-size:.82rem}
+.track{background:var(--bg);border-radius:4px;height:14px;overflow:hidden}
+.fill{height:100%;border-radius:4px;background:var(--bar)}
 .fill.best{background:var(--bar-best)}.fill.uk{background:var(--bar-uk)}
+.barrow.ukrow{font-weight:700}
 .barrow .v{text-align:right;font-variant-numeric:tabular-nums}
 ul{padding-left:20px;margin:0}li{margin-bottom:8px}
 .src a{color:var(--accent)}
 small{color:var(--muted)}
-@media (max-width:520px){.barrow{grid-template-columns:80px 1fr 70px}h1{font-size:1.4rem}}
+@media (max-width:520px){.barrow{grid-template-columns:96px 1fr 72px}h1{font-size:1.4rem}}
 </style>
 </head>
 <body>
 <main>
-  <h1>iPhone 18 Pro Max 512 GB — where is it cheapest?</h1>
-  <p class="sub">Total cost in GBP of buying in California, Texas, Michigan or Oregon and bringing it home, compared with buying in the UK. Prices as of 1 Oct 2026. Every input below can be edited.</p>
+  <h1>iPhone 18 Pro Max 512 GB: all US states vs the UK</h1>
+  <p class="sub">What you'd pay in GBP in each of the 50 US states and DC, after your discount and local sales tax, compared with buying in the UK. Prices as of 1 Oct 2026. Every input below can be edited.</p>
 
   <div class="card verdict" id="verdict"></div>
 
@@ -63,41 +66,46 @@ small{color:var(--muted)}
     <h2>Assumptions</h2>
     <div class="grid">
       <div><label for="usd">US Apple price (USD, before tax)</label><input id="usd" type="number" step="1" value="1499"><div class="hint">Apple US, unlocked</div></div>
+      <div><label for="usdisc">US discount (%)</label><input id="usdisc" type="number" step="0.5" min="0" max="100" value="17"><div class="hint">Taken off before sales tax.</div></div>
       <div><label for="uk">UK Apple price (GBP, incl. 20% VAT)</label><input id="uk" type="number" step="1" value="1499"><div class="hint">Apple UK</div></div>
+      <div><label for="ukdisc">UK discount (%)</label><input id="ukdisc" type="number" step="0.5" min="0" max="100" value="20"><div class="hint">Taken off the UK price, which includes VAT.</div></div>
       <div><label for="fx">Exchange rate (£ per $1)</label><input id="fx" type="number" step="0.0001" value="0.7546"><div class="hint" id="fxnote">Mid-market rate, 1 Oct 2026</div></div>
-      <div><label for="usdisc">US discount (%)</label><input id="usdisc" type="number" step="0.5" min="0" max="100" value="0"><div class="hint">For example an employee discount. Taken off before sales tax.</div></div>
-      <div><label for="ukdisc">UK discount (%)</label><input id="ukdisc" type="number" step="0.5" min="0" max="100" value="0"><div class="hint">Taken off the UK price, which includes VAT.</div></div>
       <div><label for="fee">Card foreign-transaction fee (%)</label><input id="fee" type="number" step="0.01" value="0"><div class="hint">0% for Wise, Revolut, Monzo, Chase UK. About 2.99% for many high-street cards.</div></div>
     </div>
-    <div style="margin-top:14px">
-      <label class="check"><input id="vat" type="checkbox" checked> <span>Include UK import VAT (20%) when you bring it home. A £1,100+ phone is over the £390 personal allowance, so VAT is legally due on the <em>full</em> value. Customs duty on phones is 0%.</span></label>
-    </div>
+    <p class="hint" style="margin:12px 0 0">US totals don't include UK import VAT.</p>
   </div>
 
   <div class="card">
-    <h2>Side-by-side (GBP)</h2>
+    <h2>Every state, cheapest first (GBP)</h2>
+    <div class="toolbar">
+      <div><label for="q">Filter states</label><input id="q" type="search" placeholder="e.g. Cal, Tex, New"></div>
+      <div><label for="mode">Sales tax rate to use</label>
+        <select id="mode">
+          <option value="avg">Average state + local rate</option>
+          <option value="state">State rate only (lowest in each state)</option>
+        </select></div>
+    </div>
     <div class="table-wrap">
     <table>
-      <thead><tr><th>Where</th><th>Sales tax rate</th><th>Price + tax (USD)</th><th>In GBP</th><th>UK import VAT</th><th>Total landed</th><th>vs UK</th></tr></thead>
+      <thead><tr><th>#</th><th>Where</th><th>Sales tax</th><th>Price + tax (USD)</th><th>Total (GBP)</th><th>vs UK</th></tr></thead>
       <tbody id="rows"></tbody>
     </table>
     </div>
-    <p class="hint">Use the dropdown in each row to pick the city. “Avg” is the population-weighted state + local average (Tax Foundation, 2026).</p>
+    <p class="hint">“Avg” is the population-weighted state + local average (Tax Foundation, 1 Jul 2026). The tax you pay depends on the store's city. For some states you can pick a city from the dropdown in that row.</p>
   </div>
 
   <div class="card">
-    <h2>Total landed cost</h2>
+    <h2>Total cost, all states</h2>
     <div class="bars" id="bars"></div>
   </div>
 
   <div class="card">
     <h2>Before you decide</h2>
     <ul>
-      <li><b>Import VAT cancels most of the saving.</b> Once you pay the 20% VAT at UK customs, a US purchase only saves you about £20–£140. The saving is largest in a state with no sales tax, like Oregon (also Delaware, Montana and New Hampshire).</li>
       <li><b>US models are eSIM-only</b> and have no physical SIM tray. Make sure your UK network supports eSIM. EE, O2, Vodafone, Three and most MVNOs do.</li>
       <li><b>Warranty and repairs:</b> AppleCare and some repair services can be limited to the country where you bought the phone. A UK purchase also gets UK Consumer Rights Act protection.</li>
-      <li><b>No tourist tax refund in CA or MI.</b> Texas has a tax-free shopping scheme for international visitors, but only at retailers that take part. Check before you rely on it. Apple Stores usually don’t.</li>
-      <li><b>Card fees matter:</b> a 2.99% foreign-transaction fee adds roughly £35. Pay in USD, not GBP. If the terminal offers to charge you in pounds (“dynamic currency conversion”), the rate is usually worse.</li>
+      <li><b>Tourist tax refunds:</b> Louisiana and Texas have tax-free shopping schemes for international visitors, but only at retailers that take part. Apple Stores usually don’t.</li>
+      <li><b>Card fees matter:</b> a 2.99% foreign-transaction fee adds roughly £30. Pay in USD, not GBP. If the terminal offers to charge you in pounds (“dynamic currency conversion”), the rate is usually worse.</li>
       <li>All figures are estimates. They aren’t tax or financial advice.</li>
     </ul>
   </div>
@@ -106,63 +114,96 @@ small{color:var(--muted)}
     <a href="https://www.apple.com/shop/buy-iphone/iphone-18-pro/6.9-inch-display-512gb-black-unlocked">Apple US</a> ·
     <a href="https://www.apple.com/uk/shop/buy-iphone/iphone-18-pro/6.9-inch-display-512gb-black">Apple UK</a> ·
     <a href="https://www.macrumors.com/2026/09/09/iphone-18-pro-pricing/">MacRumors pricing</a> ·
-    <a href="https://sales.tax/sales-tax-updates/2026-midyear-sales-tax-rates-rankings-state-by-state/">Tax Foundation 2026 midyear rates</a> ·
-    <a href="https://www.gov.uk/bringing-goods-into-uk-personal-use/arriving-in-Great-Britain">GOV.UK personal allowance</a> ·
+    <a href="https://taxfoundation.org/data/all/state/2026-sales-tax-rates-midyear/">Tax Foundation midyear 2026 rates</a> ·
     <a href="https://www.xe.com/en-us/currencyconverter/convert/?Amount=1&From=USD&To=GBP">XE USD/GBP</a>
   </small></p>
 </main>
 
 <script>
-const OPTIONS = [
-  {id:"ca", name:"California", rates:[
-    ["Avg (state+local)",9.03],["Los Angeles",9.75],["San Francisco",8.625],["San Jose",9.375],["San Diego",7.75],["State minimum",7.25]]},
-  {id:"tx", name:"Texas", rates:[
-    ["Avg (state+local)",8.20],["Houston / Dallas / Austin",8.25],["State minimum",6.25]]},
-  {id:"mi", name:"Michigan", rates:[["Statewide (no local tax)",6.00]]},
-  {id:"or", name:"Oregon", rates:[["No sales tax",0]]},
+// [state, state rate %, avg combined %] — Tax Foundation, as of 1 Jul 2026 (DC: 7% from 1 Oct 2026)
+const STATES = [
+  ["Alabama",4.00,9.46],["Alaska",0,1.82],["Arizona",5.60,8.54],["Arkansas",6.50,9.48],["California",7.25,9.03],
+  ["Colorado",2.90,7.89],["Connecticut",6.35,6.35],["Delaware",0,0],["District of Columbia",7.00,7.00],["Florida",6.00,6.98],
+  ["Georgia",4.00,7.56],["Hawaii",4.00,4.50],["Idaho",6.00,6.03],["Illinois",6.25,8.98],["Indiana",7.00,7.00],
+  ["Iowa",6.00,6.94],["Kansas",6.50,8.71],["Kentucky",6.00,6.00],["Louisiana",5.00,10.13],["Maine",5.50,5.50],
+  ["Maryland",6.00,6.00],["Massachusetts",6.25,6.25],["Michigan",6.00,6.00],["Minnesota",6.875,8.14],["Mississippi",7.00,7.06],
+  ["Missouri",4.225,8.44],["Montana",0,0],["Nebraska",5.50,6.98],["Nevada",6.85,8.24],["New Hampshire",0,0],
+  ["New Jersey",6.625,6.60],["New Mexico",4.875,7.68],["New York",4.00,8.54],["North Carolina",4.75,7.10],["North Dakota",5.00,7.09],
+  ["Ohio",5.75,7.29],["Oklahoma",4.50,9.06],["Oregon",0,0],["Pennsylvania",6.00,6.34],["Rhode Island",7.00,7.00],
+  ["South Carolina",6.00,7.49],["South Dakota",4.20,6.11],["Tennessee",7.00,9.61],["Texas",6.25,8.20],["Utah",6.10,7.42],
+  ["Vermont",6.00,6.43],["Virginia",5.30,5.77],["Washington",6.50,9.57],["West Virginia",6.00,6.60],["Wisconsin",5.00,5.72],
+  ["Wyoming",4.00,5.39],
 ];
+// Common Apple Store cities (combined rate %)
+const CITIES = {
+  "California":[["Los Angeles",9.75],["San Francisco",8.625],["San Jose",9.375],["San Diego",7.75]],
+  "Texas":[["Houston / Dallas / Austin",8.25]],
+  "New York":[["New York City",8.875]],
+  "Illinois":[["Chicago",10.25]],
+  "Washington":[["Seattle",10.35]],
+  "Nevada":[["Las Vegas",8.375]],
+  "Arizona":[["Phoenix",8.6]],
+  "Georgia":[["Atlanta",8.9]],
+  "Florida":[["Orlando",6.5],["Miami",7.0]],
+};
 const $ = id => document.getElementById(id);
 const gbp = n => "£" + n.toLocaleString("en-GB",{minimumFractionDigits:2,maximumFractionDigits:2});
 const usd = n => "$" + n.toLocaleString("en-US",{minimumFractionDigits:2,maximumFractionDigits:2});
-const chosen = {};
+const fmtPct = n => (+n.toFixed(3)) + "%";
+const chosen = {}; // state -> option index (overrides global mode)
 
-function render(){
-  const clampPct = id => Math.min(100, Math.max(0, +$(id).value || 0))/100;
-  const P = (+$("usd").value || 0)*(1-clampPct("usdisc")), UK = (+$("uk").value || 0)*(1-clampPct("ukdisc")), FX = +$("fx").value || 0,
-        FEE = (+$("fee").value || 0)/100, VAT = $("vat").checked;
-  const res = OPTIONS.map(o=>{
-    const idx = chosen[o.id] ?? 0, rate = o.rates[idx][1];
-    const totalUsd = P*(1+rate/100);
-    const inGbp = totalUsd*FX*(1+FEE);
-    const vat = VAT ? inGbp*0.20 : 0;
-    return {...o, idx, rate, totalUsd, inGbp, vat, landed: inGbp+vat};
-  });
-  res.push({id:"uk", name:"United Kingdom", uk:true, landed:UK});
-  const best = res.reduce((a,b)=> b.landed<a.landed?b:a);
-
-  $("rows").innerHTML = res.map(r=>{
-    const diff = UK - r.landed;
-    const diffTxt = r.uk ? "—" : `<span class="${diff>=0?'pos':'neg'}">${diff>=0?'save ':'+'}${gbp(Math.abs(diff))}</span>`;
-    if (r.uk) return `<tr class="${r===best?'best':''}"><td><b>United Kingdom</b></td><td>20% VAT incl.</td><td>—</td><td>${gbp(UK)}</td><td>incl.</td><td class="total">${gbp(UK)}</td><td>${diffTxt}</td></tr>`;
-    const sel = r.rates.length>1
-      ? `<select data-id="${r.id}">${r.rates.map((x,i)=>`<option value="${i}" ${i===r.idx?'selected':''}>${x[0]} — ${x[1]}%</option>`).join("")}</select>`
-      : `${r.rates[0][1]}%`;
-    return `<tr class="${r===best?'best':''}"><td><b>${r.name}</b></td><td>${sel}</td><td>${usd(r.totalUsd)}</td><td>${gbp(r.inGbp)}</td><td>${VAT?gbp(r.vat):'not included'}</td><td class="total">${gbp(r.landed)}</td><td>${diffTxt}</td></tr>`;
-  }).join("");
-  document.querySelectorAll("#rows select").forEach(s=>s.onchange=e=>{chosen[e.target.dataset.id]=+e.target.value;render();});
-
-  const max = Math.max(...res.map(r=>r.landed));
-  $("bars").innerHTML = res.map(r=>`<div class="barrow"><span>${r.name}</span><div class="track"><div class="fill ${r===best?'best':''} ${r.uk?'uk':''}" style="width:${(r.landed/max*100).toFixed(1)}%"></div></div><span class="v">${gbp(r.landed)}</span></div>`).join("");
-
-  const ca = res.find(r=>r.id==="ca");
-  const save = UK - best.landed;
-  $("verdict").innerHTML = best.uk
-    ? `With these assumptions, <b>buying in the UK is cheapest</b> at ${gbp(UK)}.`
-    : `Cheapest: <b>${best.name} at ${gbp(best.landed)}</b>, which is ${gbp(save)} (${(save/UK*100).toFixed(1)}%) less than the UK’s ${gbp(UK)}${VAT?' after paying UK import VAT':''}. California (${ca.rates[ca.idx][0]}, ${ca.rate}%) comes to ${gbp(ca.landed)}, ${UK>=ca.landed ? `a saving of ${gbp(UK-ca.landed)}` : `${gbp(ca.landed-UK)} more than the UK`}.`
-      + (VAT && save < 60 ? ` <br><small>The saving is small. Weigh it against the eSIM-only model and warranty limits listed below.</small>` : "");
+function optionsFor([name, st, avg]){
+  const opts = [];
+  if (avg === st) opts.push(["Statewide", st]);
+  else { opts.push(["Avg state+local", avg]); opts.push(["State rate only", st]); }
+  (CITIES[name] || []).forEach(c => opts.push(c));
+  return opts;
 }
 
-["usd","uk","usdisc","ukdisc","fx","fee","vat"].forEach(id=>$(id).addEventListener("input",render));
+function render(){
+  const pct = id => Math.min(100, Math.max(0, +$(id).value || 0))/100;
+  const P = (+$("usd").value || 0)*(1-pct("usdisc"));
+  const UK = (+$("uk").value || 0)*(1-pct("ukdisc"));
+  const FX = +$("fx").value || 0, FEE = (+$("fee").value || 0)/100;
+  const mode = $("mode").value, q = $("q").value.trim().toLowerCase();
+
+  const all = STATES.map(s=>{
+    const opts = optionsFor(s);
+    let idx = chosen[s[0]];
+    if (idx === undefined) idx = (mode === "state" && opts.length > 1 && opts[1][0] === "State rate only") ? 1 : 0;
+    const rate = opts[idx][1], totalUsd = P*(1+rate/100);
+    return {name:s[0], opts, idx, rate, totalUsd, total: totalUsd*FX*(1+FEE)};
+  });
+  all.push({name:"United Kingdom", uk:true, total:UK});
+  all.sort((a,b)=>a.total-b.total);
+  const best = all[0];
+
+  const shown = all.filter(r => r.uk || !q || r.name.toLowerCase().includes(q));
+  $("rows").innerHTML = shown.map(r=>{
+    const rank = all.indexOf(r)+1, diff = UK - r.total;
+    const cls = [r.uk?"uk":"", r===best?"best":""].join(" ");
+    if (r.uk) return `<tr class="${cls}"><td class="rank">${rank}</td><td>🇬🇧 United Kingdom</td><td>20% VAT incl.</td><td>—</td><td class="total">${gbp(UK)}</td><td>—</td></tr>`;
+    const sel = r.opts.length > 1
+      ? `<select data-s="${r.name}">${r.opts.map((o,i)=>`<option value="${i}" ${i===r.idx?"selected":""}>${o[0]} — ${fmtPct(o[1])}</option>`).join("")}</select>`
+      : `${r.opts[0][0]} — ${fmtPct(r.rate)}`;
+    const vs = `<span class="${diff>=0?"pos":"neg"}">${diff>=0?"save ":"+"}${gbp(Math.abs(diff))}</span>`;
+    return `<tr class="${cls}"><td class="rank">${rank}</td><td>${r.name}</td><td>${sel}</td><td>${usd(r.totalUsd)}</td><td class="total">${gbp(r.total)}</td><td>${vs}</td></tr>`;
+  }).join("");
+  document.querySelectorAll("#rows select").forEach(s => s.onchange = e => { chosen[e.target.dataset.s] = +e.target.value; render(); });
+
+  const max = Math.max(...all.map(r=>r.total));
+  $("bars").innerHTML = all.map(r=>`<div class="barrow ${r.uk?"ukrow":""}"><span>${r.uk?"🇬🇧 United Kingdom":r.name}</span><div class="track"><div class="fill ${r===best?"best":""} ${r.uk?"uk":""}" style="width:${(r.total/max*100).toFixed(1)}%"></div></div><span class="v">${gbp(r.total)}</span></div>`).join("");
+
+  const ukRank = all.findIndex(r=>r.uk)+1, cheaper = ukRank-1;
+  const worst = all[all.length-1];
+  $("verdict").innerHTML = best.uk
+    ? `With these discounts, <b>buying in the UK is cheapest</b> at ${gbp(UK)}. It beats every US state, and is ${gbp(all[1].total-UK)} less than the cheapest one (${all[1].name}).`
+    : `Cheapest: <b>${best.name} at ${gbp(best.total)}</b>, which is ${gbp(UK-best.total)} (${((UK-best.total)/UK*100).toFixed(1)}%) less than the UK’s ${gbp(UK)}. `
+      + `${cheaper} of 51 US options cost less than the UK. The most expensive is ${worst.uk?"the UK":worst.name} at ${gbp(worst.total)}.`;
+}
+
+["usd","uk","usdisc","ukdisc","fx","fee","q","mode"].forEach(id=>$(id).addEventListener("input",render));
+$("mode").addEventListener("change", ()=>{ for (const k in chosen) delete chosen[k]; render(); });
 
 // Try to fetch a live USD→GBP rate; keep the default if it fails
 fetch("https://open.er-api.com/v6/latest/USD").then(r=>r.json()).then(d=>{
