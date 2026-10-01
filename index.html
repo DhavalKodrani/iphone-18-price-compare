@@ -158,7 +158,7 @@ function render(){
   const save = UK - best.landed;
   $("verdict").innerHTML = best.uk
     ? `With these assumptions, <b>buying in the UK is cheapest</b> at ${gbp(UK)}.`
-    : `Cheapest: <b>${best.name} at ${gbp(best.landed)}</b>, which is ${gbp(save)} (${(save/UK*100).toFixed(1)}%) less than the UK’s ${gbp(UK)}${VAT?' after paying UK import VAT':''}. California (${ca.rates[ca.idx][0]}, ${ca.rate}%) comes to ${gbp(ca.landed)}, a saving of ${gbp(UK-ca.landed)}.`
+    : `Cheapest: <b>${best.name} at ${gbp(best.landed)}</b>, which is ${gbp(save)} (${(save/UK*100).toFixed(1)}%) less than the UK’s ${gbp(UK)}${VAT?' after paying UK import VAT':''}. California (${ca.rates[ca.idx][0]}, ${ca.rate}%) comes to ${gbp(ca.landed)}, ${UK>=ca.landed ? `a saving of ${gbp(UK-ca.landed)}` : `${gbp(ca.landed-UK)} more than the UK`}.`
       + (VAT && save < 60 ? ` <br><small>The saving is small. Weigh it against the eSIM-only model and warranty limits listed below.</small>` : "");
 }
 
